@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Final_currency_converter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        while(true){
+            System.out.println("\n\nWelcome to out Currency Converter System \n\n");
+            System.out.println("1.  Taka.");
+            System.out.println("2.  Rupee.");
+            System.out.println("3.  US Dollar.");
+            System.out.println("4.  Kuwaiti Dinar.\n\n");
+
+            System.out.print("Enter your currency - ");
+            int opt = input.nextInt();
+
+            if (opt == 1) {
+                System.out.println("Enter your amount (Taka) - ");
+                double taka = input.nextDouble();
+
+                double rupee = taka * 0.76;
+                double dollar = taka * 0.0093;
+                double kuwaiti_dinar = taka * 0.0028;
+
+                System.out.printf("Taka to Rupee         - %.2f \n", rupee);
+                System.out.printf("Taka to Dollar        - %.2f \n", dollar);
+                System.out.printf("Taka to Kuwaiti Dinar - %.2f \n", kuwaiti_dinar);
+            } else if (opt == 2) {
+                System.out.println("Enter yout amount (Rupee) - ");
+                double rupee = input.nextDouble();
+
+                double taka = rupee * 1.31;
+                double dollar = rupee * 0.012;
+                double kuwaiti_dinar = rupee * 0.0037;
+
+                System.out.printf("Rupee to Taka          - %.2f \n", taka);
+                System.out.printf("Rupee to Dollar        - %.2f \n", dollar);
+                System.out.printf("Rupee to Kuwaiti Dinar - %.2f \n", kuwaiti_dinar);
+
+            } else if (opt == 3) {
+                System.out.println("Enter your amount (Dollar) - ");
+                double dollar = input.nextDouble();
+
+                double taka = dollar * 108.10;
+                double rupee = dollar * 82.26;
+                double kuwaiti_dinar = dollar * 0.31;
+
+                System.out.printf("Dollar to Taka          - %.2f \n", taka);
+                System.out.printf("Dollar to Rupee         - %.2f \n", dollar);
+                System.out.printf("Dollar to Kuwaiti Dinar - %.2f \n", kuwaiti_dinar);
+
+            } else if (opt == 4) {
+
+                System.out.println("Enter your amount (Kuwaiti Dinar) - ");
+                double kuwaiti_dinar = input.nextDouble();
+
+                double taka = kuwaiti_dinar*353.75;
+                double rupee = kuwaiti_dinar*269.20;
+                double dollar = kuwaiti_dinar*3.27;
+
+                System.out.printf("Kuwaiti Dinar to Taka   - %.2f \n", taka);
+                System.out.printf("Kuwaiti Dinar to Rupee  - %.2f \n", rupee);
+                System.out.printf("Kuwaiti Dinar to Dollar - %.2f \n", dollar);
+            }
+
+            else{
+                System.out.println("Invalid keyword !!!(Arithmetic Error)");
+                break;
+            }
+
+        }
+    }
+}
